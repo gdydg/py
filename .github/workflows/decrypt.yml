@@ -1,0 +1,27 @@
+# 文件名: .github/workflows/decrypt.yml
+name: 自动解密视频地址
+
+# 触发条件：允许手动在 Actions 页面点击按钮运行
+on:
+  workflow_dispatch:
+
+jobs:
+  run-decryption:
+    runs-on: ubuntu-latest # 使用 GitHub 提供的免费 Linux 服务器
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # 指定 Python 版本
+
+      - name: 安装依赖包 (解决你的报错)
+        run: |
+          python -m pip install --upgrade pip
+          pip install xxtea-py
+
+      - name: 运行解密脚本
+        run: python script.py
