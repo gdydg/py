@@ -7,7 +7,7 @@ import urllib.request
 print("🚀 开始从远程接口拉取密文并进行批量云端解密...\n")
 
 # 1. 配置接口地址和万能密钥
-api_url = "https://zahgehznsfre.sealosbja.site/"
+api_url = "https://raw.githubusercontent.com/gdydg/py/refs/heads/main/ww.txt"
 target_key = "ABCDEFGHIJKLMNOPQRSTUVWX"
 
 try:
